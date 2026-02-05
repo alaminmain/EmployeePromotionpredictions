@@ -1,0 +1,36 @@
+SL_No,grade_no,desg_no,desg_nm,desg_type,TotalPost,YearNeedtobepromoted,PromotionFromPostSL,PreviousPostPercentise
+1,1,1,Managing Director,GENERAL,1,3,2,100
+2,2,2,Deputy Managing Director,GENERAL,1,3,3 and 4,100
+3,3,3,General Manager,GENERAL,9,3,5 and 6,100
+4,3,4,System Manager,IT,5,3,7,100
+5,4,5,Deputy General Manager,GENERAL,36,5,8 and 9,100
+6,4,6,Senior System Analyst,IT,6,5,10,100
+7,5,7,System Analyst,IT,8,5,11,100
+8,5,8,Senior Principal Officer,GENERAL,72,5,12 and 13,100
+9,6,9,Programmer,IT,10,5,14,100
+10,6,10,Principal Officer,GENERAL,107,5,15,100
+11,6,11,Engineer (IT),IT,2,5,16,100
+12,9,12,Assistant Programmer,IT,16,5,13,100
+13,9,13,Assistant Engineer(IT),IT,2,5,16,100
+14,9,14,Senior Officer,GENERAL,176,5,17,100
+15,9,15,Senior Officer (Engi.),GENERAL,1,5,16,100
+16,10,16,Officer,GENERAL,62,5,18 and 19,100
+17,10,17,Data Entry/Control Supervisor,IT,3,5,20,100
+18,10,18,Security Officer,GENERAL,1,5,19,100
+19,10,19,Librarian,GENERAL,1,5,19,100
+20,13,20,Supervisor,GENERAL,43,5,21 and 22,100
+21,13,21,Receptionist,GENERAL,4,5,22,100
+22,14,22,Computer Operator,IT,2,5,23,100
+23,14,23,Senior Despatcher,GENERAL,5,5,24,100
+24,14,24,Caretaker,GENERAL,3,5,25,100
+25,16,25,Driver,GENERAL,18,0,26 and 27,50
+26,16,26,Data Entry/Control Operator,GENERAL,55,0,27,100
+27,16,27,Electrician,GENERAL,2,0,28,100
+28,16,28,Photocopy Machine Operator,GENERAL,6,0,29,100
+29,16,29,Store Keeper,GENERAL,3,0,30,100
+30,16,30,Telephone Operator,GENERAL,2,0,31,100
+31,16,31,Cashier,GENERAL,11,0,32,100
+32,17,32,Assistant Caretaker,GENERAL,7,0,33,100
+33,17,33,Despatcher,GENERAL,9,0,34,100
+34,20,34,Office Sohayok,GENERAL,82,0,0,0
+35,20,35,Plumber,GENERAL,1,0,0,0

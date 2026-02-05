@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+bin/
+obj/
+dist/
+build/
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+*.swp
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Gemini artifacts (optional - keep if you want to track planning docs)
+# .gemini/
