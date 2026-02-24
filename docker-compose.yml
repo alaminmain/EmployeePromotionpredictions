@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  promotion-api:
+    build:
+      context: ./PromotionAPI
+      dockerfile: Dockerfile
+    container_name: promotion-api
+    ports:
+      - "5223:5223"
+    volumes:
+      # Mount the database outside the container to persist data!
+      - sqlite-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  sqlite-data:
