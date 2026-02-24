@@ -22,6 +22,7 @@ app.UseCors();
 var dbPath = Path.Combine(app.Environment.ContentRootPath, "..", "Promotion.db");
 var empCsv = Path.Combine(app.Environment.ContentRootPath, "..", "EmpList.csv");
 var orgCsv = Path.Combine(app.Environment.ContentRootPath, "..", "Final_Complete_Master_List.csv");
+var empSlCsv = Path.Combine(app.Environment.ContentRootPath, "..", "EmpListSL.csv");
 
 // =====================================================
 // API ENDPOINTS
@@ -211,6 +212,35 @@ app.MapGet("/api/report/{empId}", (string empId, string? date) =>
     });
 });
 
+// GET /api/reports/promotions-per-year - Count of promotions grouped by year
+app.MapGet("/api/reports/promotions-per-year", () =>
+{
+    var report = new List<object>();
+
+    using var conn = new SqliteConnection($"Data Source={dbPath}");
+    conn.Open();
+
+    var sql = @"SELECT substr(PredictedDate, 1, 4) as Year, COUNT(*) as PromotionCount 
+                FROM Predictions 
+                WHERE NewDesignation != 'Retirement'
+                GROUP BY substr(PredictedDate, 1, 4)
+                ORDER BY Year";
+
+    using var cmd = new SqliteCommand(sql, conn);
+    using var reader = cmd.ExecuteReader();
+
+    while (reader.Read())
+    {
+        report.Add(new
+        {
+            Year = reader["Year"]?.ToString(),
+            Count = Convert.ToInt32(reader["PromotionCount"])
+        });
+    }
+
+    return Results.Ok(report);
+});
+
 // Health check
 app.MapGet("/", () => "Promotion API is running!");
 
@@ -219,7 +249,7 @@ app.MapPost("/api/simulation/run", () =>
 {
     try
     {
-        var manager = new SimulationManager(dbPath, empCsv, orgCsv);
+        var manager = new SimulationManager(dbPath, empCsv, orgCsv, empSlCsv);
         manager.Run();
         return Results.Ok(new { message = "Simulation completed successfully" });
     }
@@ -235,5 +265,6 @@ Console.WriteLine("  GET /api/employees");
 Console.WriteLine("  GET /api/employees/{id}");
 Console.WriteLine("  GET /api/predictions/{empId}");
 Console.WriteLine("  GET /api/report/{empId}?date=YYYY-MM-DD");
+Console.WriteLine("  GET /api/reports/promotions-per-year");
 
 app.Run();

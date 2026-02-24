@@ -1,0 +1,626 @@
+SL. No.,ID No.,Employee Name,Designation
+1,20250002,Mr. Niranjan Chandra Debnath,Managing Director
+2,20250008,Mr. Md. Nurul Huda,Deputy Managing Director
+3,19950009,Mrs. Mahmuda Akter,General Manager
+4,20040031,Mr. Md. Mofizur Rahman,General Manager
+5,19950031,Mrs. Majeda Khatun,General Manager
+6,19950010,Mr. Md. Al Amin Talukder,General Manager
+7,19990001,Mr. Md. Habib Ullah,General Manager
+8,19950021,Mr. Sultan Ahmed,General Manager
+9,19950032,Mr. Md. Habibur Rahman,General Manager
+10,19950048,Mr. Bibhash Saha,General Manager
+11,19990006,Mr. Sheikh Aslam Uddin,System Manager
+12,19950025,Mr. Babul Chandra Debnath,Deputy General Manager
+13,19950017,Mrs. Rukhsana Yasmin,Deputy General Manager
+14,19950019,Mr. Md. Shorikul Anam,Deputy General Manager
+15,19950007,Mr. Md. Selim Beg,Deputy General Manager
+16,19950015,Mrs. Rifat Anwar,Deputy General Manager
+17,19950026,Mr. Md. Mahabub-ul-Alam,Deputy General Manager
+18,20040024,Mr. Mohammad Rafiqul Islam,System Manager
+19,19970039,Mr. Shamim Ahmed,Deputy General Manager
+20,19950011,Mr. Aminul Islam,Deputy General Manager
+21,19970004,Mr. Mollick Rowshan Alam,Deputy General Manager
+22,19960009,Mr. Dipak Kumar Dutta,Deputy General Manager
+23,19970051,Mr. Md. Zohirul Islam Khan,Deputy General Manager
+24,19970005,Mr. A. K. M. Nuruzzaman,Deputy General Manager
+25,19960010,Mr. Md. Abu Bakar Siddique,Deputy General Manager
+26,19970054,Mrs. Ayasha Sultana,Deputy General Manager
+27,19970027,Mr. Mehmud Hasan Murad,Deputy General Manager
+28,20040021,Mr. Mahbubur Rahman,System Manager
+29,19970045,Mr. Lutful Kader,Deputy General Manager
+30,19970003,Mr. Md. Mahbub Alam,Deputy General Manager
+31,19990005,Mr. Torab Ahmed Khan Chowdhury,Deputy General Manager
+32,19970058,Mr. Md. Nasim Ahmed,Deputy General Manager
+33,20040019,Mr. Mohammad Abul Hossain,System Manager
+34,19970025,Mr. Md. Mahabub Hasan,Deputy General Manager
+35,19990007,Mr. Ahmed Zulkarnine Sohel,Deputy General Manager
+36,19970038,Mr. Md. Sohel Ahmed,Deputy General Manager
+37,20070013,Mr. Md. Abul Kalam Azad,Deputy General Manager
+38,20070011,Mr. Abdullah Al Mamun,Deputy General Manager
+39,19990004,Mr. Md. Arifur Rahman,Deputy General Manager
+40,20070014,Mr. Jahangir Hossain,Deputy General Manager
+41,20070018,Mr. Md. Rowshan Kabir,Deputy General Manager
+42,19910007,Mr. Md. Mofizul Islam,Deputy General Manager
+43,20070015,Mr. Muhammad Murshid Alam,Deputy General Manager
+44,20070005,Mr. Biplob Kumar Saha,Deputy General Manager
+45,20070010,Mr. Taposh Dhali,Deputy General Manager
+46,20070016,Mr. Md. Ashraful Islam,Deputy General Manager
+47,20080030,Mr. Mohammad Touhid Ahmed,Deputy General Manager
+48,20070020,Mr. Gopal Chandra Karmakar,Deputy General Manager
+49,20050001,Mr. Mohammad Belayet Hossain,System Manager
+50,19910011,Mr. S. M. Mojibur Rahman,Deputy General Manager
+51,19960012,Mr. Md. Mosharraf Hossain,Assistant General Manager
+52,19890039,Mr. Md. Babul Hossain,Assistant General Manager
+53,19900038,Mr. Asaduzzaman,Assistant General Manager
+54,19920002,Mrs. Shamima Akter Begum,Assistant General Manager
+55,19890040,Mr. Md. Saiful Islam,Assistant General Manager
+56,19880004,Mr. Abdus Salek Bhatti,Assistant General Manager
+57,19910006,Mr. Md. Shamim Uddin Ahmed,Assistant General Manager
+58,19960003,Mrs. Ishrat Jahan,Assistant General Manager
+59,19910005,Mr. Muhammad Jashim Uddin Khan,Assistant General Manager
+60,19950036,Mr. Abul Kashem,Assistant General Manager
+61,20080011,Mr. Md. Yasin Ali,Assistant General Manager
+62,19890041,Mr. Md. Saiful Islam,Assistant General Manager
+63,20090004,Mr. Shashwata Kumar Saha,Assistant General Manager
+64,20040027,Mr. Mohammad Tanvir Aziz,Senior System Analyst
+65,20090005,Mr. Kafil Uddin Patwary,Assistant General Manager
+66,19950037,Mr. Md. Anwarul Haque,Assistant General Manager
+67,20100002,Mr. Iftekhar Azam,Assistant General Manager
+68,20070002,Mr. Sohel Ahmed,Assistant General Manager
+69,20100001,Mr. Mohammad Sadek Ali,Assistant General Manager
+70,20070003,Mr. Md. Moktar Hossain,Assistant General Manager
+71,19980008,Mr. Md. Ismail Hossain,Assistant General Manager
+72,20040025,Mr. Muhammad Abul Khair Azad,Senior System Analyst
+73,20050002,Mr. Md. Kamrul Hasan,Senior System Analyst
+74,20080045,Mr. Md. Mahbub Alam,Senior System Analyst
+75,20110025,Mr. Md. Maruf Billah,Assistant General Manager
+76,20120013,Mr. Md. Saiful Haque Sarkar,Assistant General Manager
+77,19980014,Mr. Kabir Ahmed,Assistant General Manager
+78,20110008,Mr. Achyutananda Dey,Assistant General Manager
+79,20120010,Mr. Mir Abu Hasan Muha. Junnun,Assistant General Manager
+80,19980007,Mr. Syed Hasan Uz-zaman,Assistant General Manager
+81,20110028,Mr. Delwar Hossain,Assistant General Manager
+82,20110005,Mr. Md. Abu Taleb,Assistant General Manager
+83,20110004,Ms. Nasrin Sultana,Assistant General Manager
+84,20120011,Mr. S. M. Saikul Alam,Assistant General Manager
+85,20110010,Mr. Shahidul Islam,Assistant General Manager
+86,20110006,Mr. Sukrit Kumar Debnath,Assistant General Manager
+87,20120017,Mr. Md. Uddipta Shahin Parag,Assistant General Manager
+88,20110016,Mr. Mainuddin Ahmed,Assistant General Manager
+89,20110011,Mr. Mizanur Rahman,Assistant General Manager
+90,20110031,Mr. Md. Mohiuddin,Assistant General Manager
+91,20120009,Mr. Md. Taiyabur Rahman,Assistant General Manager
+92,20110014,Mr. A. M. T. A. Monwar Momin,Assistant General Manager
+93,20110033,Ms. Airin Parvin Binte Faruk,Assistant General Manager
+94,20120007,Ms. Monira Akter,Assistant General Manager
+95,20110030,Mr. A. Q. M. Shafiul Alam,Assistant General Manager
+96,20110036,Ms. Runa Akter,Assistant General Manager
+97,20120014,Mr. Sohel Rana,Assistant General Manager
+98,20120015,Mr. Md. Rafiqul Alam,Assistant General Manager
+99,20060030,Mr. Md. Ahsan Ullah Bachchu,Assistant General Manager
+100,20120052,Mrs. Mahmuda Akter,Assistant General Manager
+101,20120049,Mr. Shariful Islam,Assistant General Manager
+102,19890038,Mrs. Nurjahan Begum,Assistant General Manager
+103,20120047,Mr. Md. Enamul Islam,Assistant General Manager
+104,20090008,Mr. Mohammad Mostafizur Rahman,Assistant General Manager
+105,19960005,Mr. Md. Riazul Islam,Assistant General Manager
+106,20120056,Mr. Ahsan Uddin,Assistant General Manager
+107,20120050,Mr. Md. Wahidur Rahman,Assistant General Manager
+108,20110032,Mr. Suman Kanti Baroi,Assistant General Manager
+109,19990015,Mr. Md. Sakhawat Hossain Akanda,Assistant General Manager
+110,20120048,Mr. Nazrul Islam,Assistant General Manager
+111,20120045,Mr. Khoka Ram Roy,Assistant General Manager
+112,20080047,Mr. Md. Atiqul Islam,Senior System Analyst
+113,20090001,Mr. Md. Masud Rana Prang,Senior System Analyst
+114,19950043,Mr. Md. Abdul Latif,Assistant General Manager
+115,19900040,Mst. Rebeka Sultana,Senior Principal Officer
+116,19980013,Mr. Md. Mahbubur Rahman Siddique,Senior Principal Officer
+117,19910002,Mr. Md. Rokonuzzaman Prodhan,Senior Principal Officer
+118,19910008,Mr. Md. Mansur Ahmed Majumder,Senior Principal Officer
+119,19950033,Mst. Wahida Sultana,Senior Principal Officer
+120,19950038,Mr. Md. Abdul Ohab,Senior Principal Officer
+121,20090006,Mr. Muhammad Mamunur Rashid,System Analyst
+122,19950042,Mr. A. K. M. Azad Hossain,Senior Principal Officer
+123,19980009,Mr. Md. Alauddin,Senior Principal Officer
+124,19990023,Mr. Sheikh Rafiqul Islam,Senior Principal Officer
+125,20100024,Mr. Mohammad Nurul Islam Bhuiyan,System Analyst
+126,20120046,Mr. Md. Golam Mostafa,Senior Principal Officer
+127,19990010,Mr. Md. Sohel Talukder,Senior Principal Officer
+128,19990012,Mr. Md. Abdur Razzak,Senior Principal Officer
+129,20130008,Mr. Md. Humayun Kabir,System Analyst
+130,19990016,Mr. Md. Sarwar Islam,System Analyst
+131,20140014,Mr. Md. Jashim Uddin,Senior Principal Officer
+132,20140009,Mr. Md. Zafrul Hasan,Senior Principal Officer
+133,19990022,Mr. Abdul Karim Chowdhury,Senior Principal Officer
+134,20140011,Ms. Sazia Sultana Happy,Senior Principal Officer
+135,20100023,Mr. Md. Jahidur Rahman,System Analyst
+136,20140010,Ms. Tania Akter,Senior Principal Officer
+137,20150019,Mr. Mohammad Riyasad Zaman,Senior Principal Officer
+138,20150031,Ms. Serajum Munira,Senior Principal Officer
+139,19990019,Mr. Mohammad Nazrul Islam,Senior Principal Officer
+140,20150039,Mr. A. K. M. Moshiur Rahman,Senior Principal Officer
+141,20150028,Mr. Md. Ismail Hossain,Senior Principal Officer
+142,20150001,Mr. Md. Khairul Islam,Senior Principal Officer
+143,20150014,Mr. Shamimuzzaman,Senior Principal Officer
+144,20150016,Ms. Sifat Ara Siddique,Senior Principal Officer
+145,20150006,Mr. Mahbubur Rahman,Senior Principal Officer
+146,20150024,Mr. Md. Masum Billah,Senior Principal Officer
+147,20150027,Ms. Sharmin Jahan,Senior Principal Officer
+148,20150007,Mst. Monowara Parvin,Senior Principal Officer
+149,20150020,Mr. Md. Saifuddin Sojib,Senior Principal Officer
+150,20150036,Mr. Tofael Ahmed,Senior Principal Officer
+151,20150008,Mr. Md. Nazmul Hasan,Senior Principal Officer
+152,20150025,Mr. Md. Mokbul Hossain,Senior Principal Officer
+153,20150056,Mr. Md. Abdul Halim,Senior Principal Officer
+154,20150009,Ms. Shahrin Sultana,Senior Principal Officer
+155,20150010,Ms. Sajeda Akter,Senior Principal Officer
+156,20150015,Mrs. Chowdhury Touhida Anwar,Senior Principal Officer
+157,20150013,Mr. Md. Intehad-Al-Masum,Senior Principal Officer
+158,20150029,Ms. Tahmina Akter Eva,Senior Principal Officer
+159,20150026,Ms. Juthi Rani Roy,Senior Principal Officer
+160,20150078,Mr. Md. Atiqur Rahman,Senior Principal Officer
+161,19990017,Mr. Mohammad Zohirul Islam,Senior Principal Officer
+162,20150069,Mr. Md. Rabiul Sheikh,Senior Principal Officer
+163,20120003,Mr. Md. Rashedul Haque,Senior Principal Officer
+164,20150073,Mr. S. M. Rakib Farazi,Senior Principal Officer
+165,20150072,Mr. Mohammad Maksud Alam,Senior Principal Officer
+166,19990013,Mr. Md. Al-Amin,Senior Principal Officer
+167,20150075,Mr. Md. Shahinur Rahman,Senior Principal Officer
+168,20120022,Mr. Md. Hayat Mahmud,Senior Principal Officer
+169,20150061,Mr. Md. Ibne-Al-Rifaj,Senior Principal Officer
+170,20150064,Mr. Md. Sohag Miah,Senior Principal Officer
+171,19990018,Mr. Md. Abdul Malek Sarkar,Senior Principal Officer
+172,20150074,Mr. Abir Dutta,Senior Principal Officer
+173,20120042,Mr. Kazi Abdullah-Al-Mamun,Senior Principal Officer
+174,19990020,Mrs. Tuhin Akter,Senior Principal Officer
+175,20120044,Mr. Abdullah Al Khatib,Senior Principal Officer
+176,20150080,Mr. Md. Abdul Hakim,Senior Principal Officer
+177,19990025,Mr. Md. Keramat Ali,Senior Principal Officer
+178,20150059,Mr. Md. Abdus Samad,Senior Principal Officer
+179,20150082,Mr. Md. Badruzzaman Sarkar,Senior Principal Officer
+180,19990027,Mr. A. B. M. Kafil Uddin Mukul,Senior Principal Officer
+181,20150062,Mr. Saifullah Muhammad,Senior Principal Officer
+182,20150063,Mr. Tawsif Ahmed,Senior Principal Officer
+183,19980006,Mr. Md. Akbar Hossain,Senior Principal Officer
+184,20150077,Mr. Mohammad Shawkat Iqbal,Senior Principal Officer
+185,20150070,Mr. Md. Arman Hossain,Senior Principal Officer
+186,20150060,Mr. Sultanul Arefin,Senior Principal Officer
+187,20150068,Ms. Farzana Yasmin,Senior Principal Officer
+188,20150066,Mr. Md. Masud Khan,Senior Principal Officer
+189,20100025,Mr. Toufiqul Islam,System Analyst
+190,20130001,Mr. Md. Shariful Islam,System Analyst
+191,20150081,Ms. Anita Dash,Senior Principal Officer
+192,20130003,Mr. Pijush Kanti Pal,System Analyst
+193,19980016,Mr. Abdullah-Al-Mamun,Senior Principal Officer
+194,20090007,Mr. Taslim Ahmed,Principal Officer
+195,19900046,Mrs. Ranju Baroi,Principal Officer
+196,19950040,Mrs. Tripti Biswas,Principal Officer
+197,19900026,Mr. Md. Shawkat Hossain,Principal Officer
+198,19970019,Mrs. Mita Ghosh,Principal Officer
+199,19990014,Mr. Md. Razzakul Islam,Principal Officer
+200,19960004,Mr. Md. Shafiqur Rahman,Principal Officer
+201,19980017,Mrs. Shahina Parvin,Principal Officer
+202,19990024,Mr. Md. Jahangir Hossain Khan,Principal Officer
+203,20150083,Ms. Ashura Khatun,Principal Officer
+204,20120024,Mr. Syed Rajab Ullah,Principal Officer
+205,20150085,Mr. Sujol Kumar,Principal Officer
+206,20150086,Mr. Md. Asaduzzaman,Principal Officer
+207,20150087,Ms. Nasrin Naima,Principal Officer
+208,20150088,Ms. Nure Tasmin,Principal Officer
+209,20040015,Mr. K. M. Ismail Hossain,Principal Officer
+210,20040016,Mr. Mohammad Helal Uddin Khan,Principal Officer
+211,20040001,Mr. Khaled Morshed Miah,Principal Officer
+212,20040017,Mr. B. M. Rabiul Alam,Principal Officer
+213,20040004,Mr. Elias Miah,Principal Officer
+214,20040006,Mr. Bashir Ahmed,Principal Officer
+215,20040007,Mr. Gazi Md. Moshiur Rahman,Principal Officer
+216,20040008,Mr. Muhammad Lutfar Rahman,Principal Officer
+217,20040010,Mr. Mohit Kanti Biswas,Principal Officer
+218,20040011,Ms. Shamina Sultana,Principal Officer
+219,20040013,Ms. Humayra Afrin Tania,Principal Officer
+220,20040012,Ms. Salma Akthar,Principal Officer
+221,20040014,Ms. Ayasha Siddika,Principal Officer
+222,20060009,Mst. Fatema Akter,Principal Officer
+223,20060010,Mr. Masud Miah,Principal Officer
+224,20120020,Mr. Md. Jashim Uddin,Principal Officer
+225,20120055,Mr. Md. Roni Fakir,Principal Officer
+226,20120058,Mr. Md. Anwar Hossain,Principal Officer
+227,20040018,Mr. Mohammad Kamruzzaman,Principal Officer
+228,19890012,Mr. Md. Abdul Haque,Principal Officer
+229,20150089,Mr. Md. Nazmul Islam,Principal Officer
+230,19980018,Mr. Md. Saiful Islam,Principal Officer
+231,20040003,Mr. Md. Samsuzzaman Sarkar,Principal Officer
+232,20040005,Mr. M. K. Solaiman Hossain Sarkar,Principal Officer
+233,20130004,Mst. Tania Parvin,Programmer
+234,20130006,Mr. Md. Al Amin Hossain,Programmer
+235,20040002,Mr. Rahmat Ullah Majumder,Principal Officer
+236,20130007,Mr. Sandip Chakrabarty,Engineer (IT)
+237,20130009,Mr. Md. Yeamin Mulok Shah,Engineer (IT)
+238,20060011,Ms. Aleya,Principal Officer
+239,20060012,Mr. Md. Ershadunnabi Sarkar,Principal Officer
+240,20040030,Mr. Md. Enamul Haque,Principal Officer
+241,20050004,Mr. Saiful Islam,Principal Officer
+242,20040023,Mr. Mohammad Abdul Kaiyum Khan,Principal Officer
+243,20060005,Ms. Tahmina Begum,Principal Officer
+244,20060013,Ms. Akhi Akter,Principal Officer
+245,20150043,Ms. Ayasha Siddika,Principal Officer
+246,20150045,Mr. Md. Santu Ahmed,Principal Officer
+247,20100022,Mr. Md. Nazim Uddin,Programmer
+248,20150053,Mr. Tanjir Ahmed,Programmer
+249,20180009,Mr. Nitish Ranjan Bhoumik,Programmer
+250,20180012,Ms. Shamima Yasmin,Programmer
+251,20060002,Mr. Md. Mohiuddin,Principal Officer
+252,20060003,Mr. Md. Shahabuddin Miah,Principal Officer
+253,20060001,Mr. Mosharraf Hossain,Principal Officer
+254,20060022,Mr. Mohammad Nazmul Ahsan,Principal Officer
+255,20060025,Mr. Md. Ashraful Alam,Principal Officer
+256,20060027,Mr. Fakhruddin Hawlader,Principal Officer
+257,20200001,Mr. Md. Suman Ali,Principal Officer
+258,20200002,Mr. Md. Monjur Hossain,Principal Officer
+259,20200003,Mr. Md. Iqbal Hossain,Principal Officer
+260,20200004,Mr. Delwar Hossain,Principal Officer
+261,20200005,Mr. Abu Sufian,Principal Officer
+262,20200007,Mr. Abu Jafar,Principal Officer
+263,20200008,Mr. Abdul Kaiyum,Principal Officer
+264,20200009,Mr. Animesh Roy,Principal Officer
+265,20200010,Mr. Mohammad Irfan Alam,Principal Officer
+266,20200011,Mr. Tamal Dutta,Principal Officer
+267,20200012,Mr. Mohammad Enamul Haque,Principal Officer
+268,20200013,Mr. Saif Md. Zahidul Islam,Principal Officer
+269,20200014,Mr. Snehanshu Kumar Biswas,Principal Officer
+270,20200016,Mr. Rubel Mollik,Principal Officer
+271,20200017,Mr. Mohiuddin,Principal Officer
+272,20200018,Mr. B. M. Miraj Al-Foysal,Principal Officer
+273,20200019,Mst. Shahida Khatun,Principal Officer
+274,20200020,Mr. Md. Rajon Miah,Principal Officer
+275,20200021,Mr. Sirajul Islam,Principal Officer
+276,20200022,Mr. Rajib Chandra Pal,Principal Officer
+277,20200023,Mr. Anjan Das,Principal Officer
+278,20200024,Mr. Sudipto Chowdhury,Principal Officer
+279,20200025,Mr. Kabir Hossain,Principal Officer
+280,20200026,Mr. Md. Ruhul Amin,Principal Officer
+281,20200027,Mr. Md. Mohsin Zaman,Principal Officer
+282,20200028,Mr. Md. Al Refat Rabbi,Principal Officer
+283,20200029,Mr. Abu Sayed,Principal Officer
+284,20200030,Mr. Md. Mohai Menul Islam,Principal Officer
+285,20200031,Mr. G. M. Nahidul Ehsan Milon,Principal Officer
+286,20200032,Mr. Rashid Muntasir,Principal Officer
+287,20200033,Mr. M. M. Jahangir Abbasi,Principal Officer
+288,20200034,Mr. Md. Sujan Molla,Principal Officer
+289,20200035,Mst. Fatema Khatun,Principal Officer
+290,20200037,Mr. Md. Asaduzzaman,Principal Officer
+291,20200038,Mr. Md. Sojib Sarkar,Principal Officer
+292,20200039,Mr. Atiar Hossain Fahad,Principal Officer
+293,20200040,Mr. Md. Touhidur Rahman,Principal Officer
+294,20200042,Mr. Md. Habibur Rahman,Principal Officer
+295,20200043,Mr. Md. Anisur Rahman,Principal Officer
+296,20200044,Mr. Md. Arif Biswas,Principal Officer
+297,20200045,Mr. Md. Kamruzzaman,Principal Officer
+298,20200047,Mr. R. M. Rubaiyat Hossain,Principal Officer
+299,20200050,Mr. Mohammad Mostafa Azad,Principal Officer
+300,20200051,Mr. Anirban Das,Principal Officer
+301,20200052,Ms. Tania Nasrin,Principal Officer
+302,20200053,Mr. Mahbub Hasan,Principal Officer
+303,20200055,Mr. Ashish Majumder,Principal Officer
+304,20180013,Mr. Rothindra Nath Das,Programmer
+305,20180015,Ms. Sweety Mondal,Programmer
+306,20040009,Ms. Masuda Khanom,Senior Officer
+307,20060006,Ms. Shahrin Mostafa,Senior Officer
+308,20060023,Mr. Mukul Hossain,Senior Officer
+309,20060024,Mr. Syed Rana Hasan,Senior Officer
+310,20060028,Mr. Abu Md. Rokonuzzaman,Senior Officer
+311,20150057,Mr. Sayed Ulla Mamun,Senior Officer
+312,20080042,Mr. Md. Shahria Imam,Senior Officer
+313,20080035,Mr. Md. Touhidul Islam,Senior Officer
+314,20080034,Mr. Holashoi Marma,Senior Officer
+315,20080031,Mr. Moazzem Hossain,Senior Officer
+316,20060014,Mr. Din Mohammad Khan,Senior Officer
+317,20080037,Mr. Md. Saiful Islam,Senior Officer
+318,20080025,Mr. Md. Shahin,Senior Officer
+319,20080020,Mr. Belayet Hossain,Senior Officer
+320,20080029,Mr. Mirza Mohammad Omar Faruk,Senior Officer
+321,20080026,Ms. Nargis Akter,Senior Officer
+322,20080021,Ms. Mahmuda Akter,Senior Officer
+323,20080036,Ms. Wahida Parvin,Senior Officer
+324,20080033,Mr. A. K. M. Fazle Rabbi Prodhan,Senior Officer
+325,20080049,Mr. Mohammad Selim Miah,Senior Officer
+326,20080052,Mr. Md. Arifur Rahman,Senior Officer
+327,20080051,Mr. Mohammad Jahangir Alam,Senior Officer
+328,20200069,Mr. Mohammad Nahid Hasan,Senior Officer
+329,20200070,Mr. Md. Sabrul Islam,Senior Officer
+330,20200071,Mr. Mohammad Jobayer Chowdhury,Senior Officer
+331,20200072,Mr. Shah Alam,Senior Officer
+332,20060015,Mr. Md. Zahidul Islam,Senior Officer
+333,20080027,Mr. Md. Sharif Uddin,Senior Officer
+334,20080022,Mr. Mohammad Nure Alam Shamim,Senior Officer
+335,20060016,Mr. Md. Abul Kashem,Senior Officer
+336,20100005,Mr. Md. Hafizur Rahman,Assistant Programmer
+337,20210001,Mr. Md. Minhaj Uddin,Senior Officer
+338,20210002,Mr. Md. Nasir Uddin,Senior Officer
+339,20210003,Mr. Rajib Ahmed,Senior Officer
+340,20210004,Mr. Md. Masud Amin Azad,Senior Officer
+341,20210005,Mr. Md. Tarikul Islam,Senior Officer
+342,20210006,Mr. Md. Sohel,Senior Officer
+343,20210007,Mr. Anup Kumar Das,Senior Officer
+344,20210008,Mr. Md. Billal Hossain,Senior Officer
+345,20210009,Mr. Md. Zahidul Islam,Senior Officer
+346,20210010,Mr. Md. Asif Jahan,Senior Officer
+347,20210014,Mr. Md. Abul Hashem,Assistant Programmer
+348,20210015,Mr. Bayezid Bostami,Senior Officer
+349,20210016,Ms. Sarkar Nusrat Jahan,Senior Officer
+350,20100006,Mr. Muhammad Ekhlas Hossain,Senior Officer
+351,20100007,Mr. Md. Kamrul Hasan,Senior Officer
+352,20180008,Mr. Nasir Uddin,Assistant Programmer
+353,20100019,Ms. Sharmin Sultana,Senior Officer
+354,20100003,Mr. Aminur Rahman Sohag,Senior Officer
+355,20100016,Mr. Foysal Kabir,Senior Officer
+356,20100004,Mst. Shahanaj Begum,Senior Officer
+357,20230001,Mr. Kazi Shoaib Hasan,Senior Officer
+358,20230004,Mr. Md. Atiqur Rahman,Senior Officer
+359,20230006,Mr. Md. Shibly Noman Munim,Senior Officer
+360,20230007,Mr. Md. Mostafa Kamal,Senior Officer
+361,20230008,Mr. Md. Sohel Rana,Senior Officer
+362,20230014,Mr. Rakhal Roy,Senior Officer
+363,20230015,Mr. Sabyasachi Dey,Senior Officer
+364,20230017,Mr. Md. Abdul Ahad Rafi,Senior Officer
+365,20100008,Mr. Muha. Aminul Haque,Senior Officer
+366,20100009,Mr. Md. Bazlur Rahman,Senior Officer
+367,20100013,Ms. Razia Sultana,Senior Officer
+368,20100021,Mr. Mohammad Saidul Islam,Senior Officer
+369,20100018,Mr. Md. Mosharraf Hossain,Senior Officer
+370,20240003,Mr. Al Asib Hasan,Senior Officer
+371,20240006,Mr. Aloke Ratan Pal,Senior Officer
+372,20240008,Mr. Md. Zahed Hossain Rubel,Senior Officer
+373,20240011,Mr. Ranadhir Dey,Senior Officer
+374,20240012,Mr. Prantik Bala,Senior Officer
+375,20240013,Mr. Md. Ariful Islam,Senior Officer
+376,20240014,Mr. Arifur Rahman,Senior Officer
+377,20240015,Ms. Shamima Nasrin,Senior Officer
+378,20240017,Mr. Md. Zahedul Islam,Senior Officer
+379,20240018,Ms. Umme Rezwana,Senior Officer
+380,20240019,Ms. Subarna Ghosh,Senior Officer
+381,20240025,Ms. Mariam Akter,Assistant Programmer
+382,20240026,Mr. Omar Faruk,Assistant Programmer
+383,20080032,Mr. Md. Mamunur Rashid,Senior Officer
+384,20060018,Mr. Md. Abu Jafar,Senior Officer
+385,20100011,Mr. Md. Abdus Sobur,Senior Officer
+386,20100012,Mr. Ziaul Haque Chowdhury,Senior Officer
+387,20100017,Ms. Tumpa Rani Sen,Senior Officer
+388,20100010,Mr. Md. Monirul Islam,Senior Officer
+389,20130044,Mr. Md. Selim Reza,Senior Officer
+390,20250003,Mr. S. M. Salauddin,Senior Officer
+391,20250004,Mr. Abidur Rahman Sojib,Senior Officer
+392,20250005,Ms. Jannatul Ferdous,Senior Officer
+393,20250006,Mr. Md. Arkan Islam,Senior Officer
+394,20250007,Mr. Sheikh Jamilur Rahman,Senior Officer
+395,20250009,Mr. S. M. Sagar,Senior Officer (Engr.)
+396,20250015,Mr. Sumit Das Joy,Senior Officer
+397,20080023,Mr. Mohammad Sajedul Karim,Officer
+398,20060017,Mr. Md. Habibuzzaman,Officer
+399,20060019,Mr. Mohammad Omar Faruk,Officer
+400,20100015,Ms. Farida Parvin,Officer
+401,19990026,Mrs. Mukta Khanom,Officer
+402,20130046,Mr. S. M. Sohel Sarwar,Officer
+403,20130011,Mr. Ashikur Rahman,Officer
+404,20130012,Mr. Mohammad Shahidul Islam Chowdhury,Officer
+405,20130047,Mr. Mrinal Kanti Sen,Officer
+406,20130013,Mr. Md. Anwarul Amin,Officer
+407,20130014,Mr. Kayez Ahmed,Officer
+408,20130015,Mr. Mizanur Rahman,Officer
+409,20130048,Mst. Nilufa Yasmin,Officer
+410,20130016,Mr. Sheikh Mohammad Ishtiaq Hossain,Officer
+411,20130017,Mr. Sheikh Ariful Islam,Officer
+412,20130018,Mr. Amir Uddin,Officer
+413,20130019,Mr. Md. Moktar Hossain,Officer
+414,20130020,Mr. Rezaul Karim,Officer
+415,20200060,Mr. Md. Shafat Rahman,Officer
+416,20200073,Ms. Mahbuba Jannat Usha,Officer
+417,20200074,Ms. Sumi Parvin,Officer
+418,20200075,Mr. Md. Sohag Sheikh,Officer
+419,20130021,Mr. Md. Mamun Rana,Officer
+420,20130022,Syeda Razia Sultana,Officer
+421,20130023,Mr. Md. Jamal Hossain,Officer
+422,20130024,Ms. Ashma Akter Sima,Officer
+423,20210017,Mr. Kollol Dey,Officer
+424,20210020,Mr. Mehedi Hasan,Officer
+425,20130049,Mr. Md. Jashim Uddin,Officer
+426,20130025,Mr. Md. Suman Matubbar,Officer
+427,20130050,Mr. Mrinal Kanti Mondal,Officer
+428,20130026,Mr. Md. Lutfar Rahman,Officer
+429,20130051,Ms. Umme Salma Akter,Officer
+430,20130052,Mr. Md. Barkat Ullah,Officer
+431,20230019,Mr. Md. Asaduzzaman,Officer
+432,20230020,Ms. Ismat Ara Itu,Officer
+433,20230021,Mr. Md. Abdullah-Al Mamun,Officer
+434,20230022,Ms. Farah Mahrufa,Officer
+435,20080017,Mr. Mohammad Omar Faruk,Officer
+436,20130027,Mr. Md. Khaledur Rahman Khaled,Officer
+437,20130028,Mr. Md. Golam Kibria,Officer
+438,20240001,Mr. Md. Sabbir Hossain,Librarian
+439,20240023,Mr. Sheikh Abir Uddin,Officer
+440,20130029,Mr. Isarul Islam,Officer
+441,20250010,Mr. Md. Abdul Awal,Officer
+442,20250012,Mr. Md. Rahwar Aswad,Officer
+443,20250013,Ms. Rabeya Akter,Officer
+444,20250014,Mr. Kawsar Ahmed,Officer
+445,20250016,Ms. Kanta Ghosh,Officer
+446,20250017,Ms. Sumaita Sultana,Officer
+447,19900027,Mr. Md. Anwar Hossain,Supervisor
+448,19970037,Mr. Md. Abul Kalam Azad,Supervisor
+449,20130031,Mr. Md. Aminul Islam,Supervisor
+450,20130053,Mr. Md. Arifur Rahman,Supervisor
+451,20130032,Mr. Md. Golam Sarwar,Supervisor
+452,20130033,Mr. Md. Ajmir Haque Chowdhury,Supervisor
+453,20130034,Mr. Md. Mainul Hasan,Supervisor
+454,20130035,Mr. Moshiur Rahman,Supervisor
+455,20130036,Mr. Mohammad Samsul Huda,Supervisor
+456,20130038,Mst. Nurbanu Begum,Supervisor
+457,20130037,Ms. Nur-E-Afroz,Supervisor
+458,20130039,Mr. Golam Habibul Hossain Chowdhury,Supervisor
+459,20130040,Mr. Md. Mahabubur Rahman,Supervisor
+460,20130041,Ms. Jannatul Ferdous,Supervisor
+461,20130042,Mr. Mohammad Sharif Fakir,Supervisor
+462,20130043,Mst. Elachi Khatun,Supervisor
+463,20130054,Mr. Samsul Haque Dewan,Supervisor
+464,20140001,Ms. Mahmuda Akter,Supervisor
+465,20140016,Mr. Md. Anwar Hossain,Supervisor
+466,20140017,Mr. Mofizul Islam,Supervisor
+467,20080012,Mr. Abdur Rashid,Supervisor
+468,20170002,Mr. Eliash Hawlader,Supervisor
+469,20170003,Mr. Mohammad Morshed Sarkar,Supervisor
+470,20170004,Mr. Sabuj Chandra Majumder,Supervisor
+471,20170005,Mr. Sardar Nur Islam,Supervisor
+472,20080003,Mr. Md. Hasan Khan,Supervisor
+473,20180018,Ms. Farzana Sharif,Supervisor
+474,20190003,Mr. Md. Oli Ahmed,Supervisor
+475,20140027,Mr. Saidur Rahman,Supervisor
+476,20190002,Mr. Saidul Alam Amir Khasru,Supervisor
+477,19890005,Mr. Md. Fayezul Haque,Senior Dispatcher
+478,19920004,Mr. Md. Kamal Hossain,Caretaker
+479,19950006,Mr. Md. Abdus Salam Sarkar,Senior Dispatcher
+480,20190009,Mr. Md. Mamun Hossain,Computer Operator
+481,19900023,Mr. Md. Shafiqul Islam Dewan,Senior Dispatcher
+482,19900021,Mr. Md. Habibur Rahman,Caretaker
+483,19900022,Mr. Md. Refaj Uddin,Caretaker
+484,19900024,Mr. Md. Hemayet Hossain,Senior Dispatcher
+485,19950001,Mr. Ashim Kumar Biswas,Senior Dispatcher
+486,19940001,Mr. Moha. Mojibur Rahman,Driver
+487,19970062,Mr. Md. Jalal Uddin Sikder,Photocopy Machine Operator
+488,19990002,Mr. Md. Belayet Hossain,Driver
+489,19990003,Mr. Syed Md. Jahangir Hossain,Driver
+490,20000001,Mr. Md. Abdul Karim,Driver
+491,20000002,Mr. Md. Kamal Hossain,Driver
+492,20060020,Mr. Md. Jewel Hossain Sardar,Driver
+493,20060021,Mr. Md. Suman,Driver
+494,20140002,Mr. Md. Elias Ahmed,Driver
+495,20140003,Mr. Md. Raju Fakir,Driver
+496,20140004,Mr. Rifat Ahmed,Driver
+497,20140005,Mr. Md. Abdul Alim,Driver
+498,20140015,Mr. Md. Babul Akter,Driver
+499,20150054,Mr. Md. Arifur Rahman,Electrician
+500,20150055,Mr. Md. Nazrul Islam Sohag,Electrician
+501,20180020,Mr. Md. Sahidar Rahman,Driver
+502,20180021,Mr. Md. Hasan Ali,Driver
+503,20180022,Mr. Abdul Kuddus (Rajib),Driver
+504,20190005,Mr. Md. Shariful Islam,Cashier
+505,20190007,Mr. Nurul Islam,Data Entry/Control Operator
+506,20190008,Mr. Aflatul Hossain,Data Entry/Control Operator
+507,20190013,Mr. Abdul Karim,Data Entry/Control Operator
+508,20190014,Mr. Binoy Bhushan Sarkar,Data Entry/Control Operator
+509,20190015,Mr. Md. Jamat Ali,Data Entry/Control Operator
+510,20190016,Mr. Md. Mizanul Islam,Data Entry/Control Operator
+511,20190018,Mr. Tarikul Islam,Data Entry/Control Operator
+512,20190020,Mr. Mohammad Ali Azim Khan,Data Entry/Control Operator
+513,20190021,Mr. Md. Oliullah,Data Entry/Control Operator
+514,20190025,Mr. Sufol Chandra Barman,Data Entry/Control Operator
+515,20190026,Mr. Md. Rashedul Islam,Data Entry/Control Operator
+516,20190027,Mr. Amir Uddin,Data Entry/Control Operator
+517,20190028,Mr. A. B. M. Mostafizur Rahman,Data Entry/Control Operator
+518,20190029,Mr. Md. Shamim Uddin,Data Entry/Control Operator
+519,20190031,Ms. Tania Akter,Data Entry/Control Operator
+520,20190032,Mr. Mazidul Islam,Data Entry/Control Operator
+521,20190033,Mr. Md. Nuruzzaman,Data Entry/Control Operator
+522,20190034,Mr. Zahid Anwar,Data Entry/Control Operator
+523,20190035,Mr. Saifur Rahman,Cashier
+524,20200064,Mr. Mir Shariful Islam,Data Entry/Control Operator
+525,20200066,Ms. Jebun Nessa,Data Entry/Control Operator
+526,20080013,Mr. Najir Ahmed,Store Keeper
+527,20080016,Ms. Tahira,Store Keeper
+528,20080014,Mr. Jahangir Alam,Photocopy Machine Operator
+529,20080006,Mr. Md. Meher Talukder,Photocopy Machine Operator
+530,20080009,Mr. Md. Anarul Islam,Photocopy Machine Operator
+531,20080010,Mr. Md. Parvez,Photocopy Machine Operator
+532,20080039,Mr. Md. Iqbal Hossain,Photocopy Machine Operator
+533,20230024,Mr. Md. Maksudul Hasan,Data Entry/Control Operator
+534,20230025,Mr. Roman Khan,Data Entry/Control Operator
+535,20230027,Mr. Md. Atiqur Rahman,Data Entry/Control Operator
+536,20230028,Mr. Md. Kawsar Hamid,Data Entry/Control Operator
+537,20230029,Mr. Md. Faridul Islam,Data Entry/Control Operator
+538,20230030,Mr. Md. Kamal Hossain,Data Entry/Control Operator
+539,20230031,Mr. Aminul Islam,Data Entry/Control Operator
+540,20230032,Mr. Mehedi Hasan Mukut,Data Entry/Control Operator
+541,20230033,Mr. Debasish Kumar Gain,Data Entry/Control Operator
+542,20230034,Mr. Md. Selim Reza,Data Entry/Control Operator
+543,20230035,Mr. Nayem Mollik,Data Entry/Control Operator
+544,20230036,Mr. Md. Rabiul Islam,Data Entry/Control Operator
+545,20230037,Mr. Suman Miah,Data Entry/Control Operator
+546,20230038,Ms. Sagira Parvin,Data Entry/Control Operator
+547,20230039,Ms. Lipi Khatun,Data Entry/Control Operator
+548,20230040,Mr. Mohammad Shamim Hossain,Data Entry/Control Operator
+549,20230041,Mr. Md. Akibul Islam,Data Entry/Control Operator
+550,20230042,Mr. Samir Chandra Majumder,Data Entry/Control Operator
+551,20230043,Mr. Md. Abbas Ali,Cashier
+552,20080002,Ms. Habiba Khatun,Store Keeper
+553,19950002,Mr. Md. Moshiur Rahman,Dispatcher
+554,19950003,Mr. Md. Tozammel Hossain,Dispatcher
+555,19950004,Mr. Md. Sultan Ahmed,Assistant Caretaker
+556,19960007,Mr. Md. Mokhlesur Rahman,Dispatcher
+557,19960008,Mr. Md. Manik Miah,Assistant Caretaker
+558,19970014,Mr. Md. Zillur Rahman Khaki,Dispatcher
+559,19970015,Mr. Md. Tipu Sultan,Assistant Caretaker
+560,19970016,Mr. Dilip Kumar Majumder,Assistant Caretaker
+561,19970018,Mr. Md. Abdul Malik,Dispatcher
+562,19970029,Mr. Siraj Hossain,Dispatcher
+563,19970030,Mr. Md. Mamun-Or-Rashid,Assistant Caretaker
+564,19970031,Mr. Lutfar Rahman Talukder,Dispatcher
+565,19970040,Mrs. Salma Begum,Assistant Caretaker
+566,19970047,Mr. Md. Nasir Uddin Majumder,Assistant Caretaker
+567,19970048,Mr. Md. Shahid Ullah,Dispatcher
+568,20080005,Mr. Sunil Chandra Das,Dispatcher
+569,19970017,Mr. Md. Golam Mostafa,Office Assistant
+570,19980011,Mr. Md. Belayet Hossain,Plumber
+571,20080018,Mr. Md. Shariful Islam,Office Assistant
+572,20080038,Mr. Murad Hossain,Office Assistant
+573,20080040,Mr. Md. Rashed Khan Menon,Office Assistant
+574,20080041,Mr. Md. Abdul Matin,Office Assistant
+575,20110038,Mr. Md. Sohel Khalifa,Office Assistant
+576,20110039,Mr. Md. Ali Hossain Khan,Office Assistant
+577,20110040,Mr. Md. Mofazzal Hossain,Office Assistant
+578,20110041,Mr. Md. Rafiqul Islam,Office Assistant
+579,20110043,Mr. Jamir Hossain,Office Assistant
+580,20110042,Mr. K. M. Bellal Hossain,Office Assistant
+581,20120025,Mr. Ali Akbar Miah,Office Assistant
+582,20120026,Mr. Md. Ruben,Office Assistant
+583,20120028,Mr. Lutfar Rahman,Office Assistant
+584,20120029,Mr. Md. Imtiaz Hossain Dulal,Office Assistant
+585,20120030,Mr. Abul Fayez,Office Assistant
+586,20120031,Mr. Abdul Barek Miah,Office Assistant
+587,20120032,Mr. Md. Rowshan Alam Sarkar,Office Assistant
+588,20120033,Mr. Md. Abdul Razzak,Office Assistant
+589,20120034,Mr. Md. Ali Ahmed,Office Assistant
+590,20120035,Ms. Golapi Khatun,Office Assistant
+591,20120036,Mr. Md. Mamunur Rashid,Office Assistant
+592,20120037,Mr. Md. Rashed Uddin Chowdhury,Office Assistant
+593,20120038,Mr. Md. Milon Mahmud,Office Assistant
+594,20140020,Mr. Md. Anwar Ullah,Office Assistant
+595,20140021,Mr. Md. Imran Hossain,Office Assistant
+596,20140022,Mr. Md. Hamidul Islam,Office Assistant
+597,20140023,Mr. Md. Wasim Akram,Office Assistant
+598,20140024,Mr. Md. Joynal Hossain,Office Assistant
+599,20140025,Mr. Md. Sohanur Rahman Sagar,Office Assistant
+600,20140026,Mr. Md. Shahadat Hossain,Office Assistant
+601,20140028,Mr. Md. Abdul Malek,Office Assistant
+602,20140029,Ms. Lucky Khanom,Office Assistant
+603,20140030,Mr. Md. Mahbub Amin,Office Assistant
+604,20140031,Mr. Md. Al-Mamun Prodhan,Office Assistant
+605,20140032,Mr. Md. Sohel Ahmed,Office Assistant
+606,20140034,Mr. Nazmus Sakib,Office Assistant
+607,20140035,Mr. Fakhrul Islam Mahfuz,Office Assistant
+608,20140036,Mr. Md. Moniruzzaman,Office Assistant
+609,20170011,Mr. Moniruzzaman,Office Assistant
+610,20170012,Mr. S. M. Nasirul Islam,Office Assistant
+611,20170013,Mr. Awlad Hossain,Office Assistant
+612,20170014,Mst. Zakia Sultana,Office Assistant
+613,20170017,Mr. Nasir Uddin,Office Assistant
+614,20170018,Mr. Md. Rubel Ali,Office Assistant
+615,20180002,Mr. Riaz Hasan Russel,Office Assistant
+616,20180004,Mr. Md. Mehedi Hasan,Office Assistant
+617,20180005,Mr. Mohammad Naim Uddin,Office Assistant
+618,20180006,Mr. Md. Mojibur Rahman,Office Assistant
+619,20180023,Mr. Md. Zahidul Islam,Office Assistant
+620,20190001,Ms. Shahanaj Akter Moni,Office Assistant
+621,20200062,Mr. Md. Foysal,Office Assistant
+622,20230046,Ms. Afroza Ferdousi Shila,Office Assistant
+623,20230047,Mr. Imon Sheikh,Office Assistant
+624,20230049,Mr. Md. Masudur Rahman,Office Assistant
+625,20230050,Mr. Sojib Hossain Khan,Office Assistant

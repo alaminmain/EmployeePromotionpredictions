@@ -114,23 +114,42 @@ namespace PromotionAPI.Services
         }
     }
 
+    public class EmpSl
+    {
+        public int SlNo { get; set; }
+        public string IdNo { get; set; } = "";
+    }
+
+    public class EmpSlMap : ClassMap<EmpSl>
+    {
+        public EmpSlMap()
+        {
+            Map(m => m.SlNo).Name("SL. No.");
+            Map(m => m.IdNo).Name("ID No.");
+        }
+    }
+
     public class SimulationManager
     {
         private readonly string _dbPath;
         private readonly string _empCsv;
         private readonly string _orgCsv;
+        private readonly string _empSlCsv;
 
-        public SimulationManager(string dbPath, string empCsv, string orgCsv)
+        public SimulationManager(string dbPath, string empCsv, string orgCsv, string empSlCsv)
         {
             _dbPath = dbPath;
             _empCsv = empCsv;
             _orgCsv = orgCsv;
+            _empSlCsv = empSlCsv;
         }
 
         public void Run()
         {
             var employees = LoadEmployees(_empCsv);
             var orgPosts = LoadOrgPosts(_orgCsv);
+
+            UpdateSeniorIdFromSlCsv(employees, _empSlCsv);
 
             var activeEmployees = employees
                 .Where(e => e.Status == "Regular" || e.Status == "Prl")
@@ -164,6 +183,40 @@ namespace PromotionAPI.Services
                 emp.IsRetired = false;
             }
             return records;
+        }
+
+        private void UpdateSeniorIdFromSlCsv(List<Employee> employees, string slCsvPath)
+        {
+            if (!File.Exists(slCsvPath)) return;
+
+            var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                MissingFieldFound = null,
+                HeaderValidated = null,
+            };
+
+            using var reader = new StreamReader(slCsvPath);
+            using var csv = new CsvReader(reader, config);
+            csv.Context.RegisterClassMap<EmpSlMap>();
+
+            var slRecords = csv.GetRecords<EmpSl>().ToList();
+            var slDict = slRecords
+                .Where(x => !string.IsNullOrWhiteSpace(x.IdNo))
+                .GroupBy(x => x.IdNo.Replace("'", "").Trim())
+                .ToDictionary(g => g.Key, g => g.First().SlNo);
+
+            foreach (var emp in employees)
+            {
+                emp.SeniorId = null; // Reset first
+                if (!string.IsNullOrWhiteSpace(emp.EmpId))
+                {
+                    var cleanEmpId = emp.EmpId.Replace("'", "").Trim();
+                    if (slDict.TryGetValue(cleanEmpId, out int slNo))
+                    {
+                        emp.SeniorId = slNo;
+                    }
+                }
+            }
         }
 
         private List<OrgPost> LoadOrgPosts(string path)
@@ -224,11 +277,11 @@ namespace PromotionAPI.Services
         {
             var predictions = new List<Prediction>();
             int startYear = DateTime.Today.Year;
-            if (DateTime.Today.Month > 6) startYear++;
+            if (DateTime.Today.Month > 7) startYear++;
 
             for (int year = startYear; year <= startYear + 40; year++)
             {
-                var currentDate = new DateTime(year, 6, 1);
+                var currentDate = new DateTime(year, 7, 1);
 
                 // A. Retirements
                 var retiringNow = employees.Where(e => !e.IsRetired && e.RetirementDate <= currentDate && e.RetirementDate > currentDate.AddYears(-1)).ToList();

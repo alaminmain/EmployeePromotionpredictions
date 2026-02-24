@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-const API_BASE = "http://localhost:5050";
+const API_BASE = "http://localhost:5223";
 
 function App() {
   const [employees, setEmployees] = useState([]);
@@ -9,10 +9,11 @@ function App() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedEmployee, setSelectedEmployee] = useState(null);
   const [predictions, setPredictions] = useState([]);
-  const [targetDate, setTargetDate] = useState("2036-06-01");
+  const [targetDate, setTargetDate] = useState("2036-07-01");
   const [loading, setLoading] = useState(false);
-  const [viewMode, setViewMode] = useState("overview"); // 'overview', 'timeline' or 'report'
+  const [viewMode, setViewMode] = useState("overview"); // 'overview', 'timeline', 'report', 'yearly'
   const [overviewData, setOverviewData] = useState([]);
+  const [yearlyData, setYearlyData] = useState([]);
 
   // Load employees
   const loadEmployees = () => {
@@ -32,9 +33,20 @@ function App() {
     }
   };
  
+  const loadYearlyReport = async () => {
+    try {
+      const res = await fetch(`${API_BASE}/api/reports/promotions-per-year`);
+      const data = await res.json();
+      setYearlyData(data);
+    } catch (err) {
+      console.error("Failed to load yearly report:", err);
+    }
+  };
+
   useEffect(() => {
     loadEmployees();
     loadOverview();
+    loadYearlyReport();
   }, []);
  
   // Rebuild simulation
@@ -175,6 +187,12 @@ function App() {
             >
               📄 Report
             </button>
+            <button
+              className={viewMode === "yearly" ? "active" : ""}
+              onClick={() => setViewMode("yearly")}
+            >
+              📅 Yearly Report
+            </button>
           </div>
         </div>
 
@@ -212,7 +230,11 @@ function App() {
         />
       )}
  
-      {selectedEmployee && !loading && viewMode !== "overview" && (
+      {viewMode === "yearly" && !loading && (
+        <YearlyReport data={yearlyData} />
+      )}
+
+      {selectedEmployee && !loading && viewMode !== "overview" && viewMode !== "yearly" && (
         <div className="content">
           {viewMode === "timeline" ? (
             <Timeline employee={selectedEmployee} predictions={predictions} />
@@ -323,6 +345,16 @@ function EmployeeOverview({ data, onSelect }) {
 
 // Timeline Component
 function Timeline({ employee, predictions }) {
+  // Helper to calculate years between two ISO date strings (approx)
+  const calculateYearsBetween = (date1, date2) => {
+    if (!date1 || !date2) return null;
+    const d1 = new Date(date1);
+    const d2 = new Date(date2);
+    const diffTime = Math.abs(d2 - d1);
+    const diffYears = diffTime / (1000 * 60 * 60 * 24 * 365.25);
+    return diffYears.toFixed(1);
+  };
+
   return (
     <div className="timeline-container">
       <h2>Career Promotion Path</h2>
@@ -333,26 +365,41 @@ function Timeline({ employee, predictions }) {
         <span className="emp-id">ID: {employee.employeeId || employee.empId}</span>
       </div>
 
-      <div className="timeline">
-        {predictions.map((pred, idx) => (
-          <div
-            key={idx}
-            className={`timeline-item ${
-              pred.newDesignation === "Retirement" ? "retirement" : ""
-            }`}
-          >
-            <div className="timeline-step">{pred.step}</div>
-            <div className="timeline-content">
-              <div className="timeline-date">{pred.predictedDate}</div>
-              <div className="timeline-promotion">
-                <span className="from-grade">{pred.fromGrade}</span>
-                <span className="arrow">→</span>
-                <span className="to-grade">{pred.toGrade}</span>
+      <div className="staircase-wrapper">
+        <div className="staircase">
+          {predictions.map((pred, idx) => {
+            let timeCount = null;
+            if (idx > 0 && pred.predictedDate && predictions[idx - 1].predictedDate) {
+              timeCount = calculateYearsBetween(predictions[idx - 1].predictedDate, pred.predictedDate);
+            }
+            
+            return (
+              <div
+                key={idx}
+                className={`stair-step ${pred.newDesignation === "Retirement" ? "retirement" : ""}`}
+                style={{ "--step": idx }}
+              >
+                {idx > 0 && <div className="riser"></div>}
+                <div className="tread"></div>
+
+                <div className="stair-content">
+                  <div className="stair-date">
+                    {pred.predictedDate}
+                    {timeCount !== null && (
+                      <span className="time-count">(+{timeCount} yrs)</span>
+                    )}
+                  </div>
+                  <div className="stair-position">{pred.newDesignation}</div>
+                  <div className="stair-grades">
+                    <span className="grade-badge">{pred.fromGrade}</span>
+                    <span className="arrow">→</span>
+                    <span className="grade-badge highlight">{pred.toGrade}</span>
+                  </div>
+                </div>
               </div>
-              <div className="timeline-position">{pred.newDesignation}</div>
-            </div>
-          </div>
-        ))}
+            );
+          })}
+        </div>
       </div>
 
       {predictions.length === 0 && (
@@ -439,6 +486,49 @@ function Report({ employee, predictions, targetDate }) {
         )}
       </div>
 
+      <button className="print-btn" onClick={handlePrint}>
+        🖨️ Print Report
+      </button>
+    </div>
+  );
+}
+
+// Yearly Report Component
+function YearlyReport({ data }) {
+  const handlePrint = () => window.print();
+
+  return (
+    <div className="report-container">
+      <div className="report">
+        <div className="report-header">
+          <h2>YEARLY PROMOTION OVERVIEW</h2>
+          <div className="report-date">
+            Generated: {new Date().toLocaleDateString()}
+          </div>
+        </div>
+
+        <table className="report-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Total Promotions Predicted</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item, idx) => (
+              <tr key={idx}>
+                <td><strong>{item.year}</strong></td>
+                <td>{item.count}</td>
+              </tr>
+            ))}
+            {data.length === 0 && (
+              <tr>
+                <td colSpan="2" style={{ textAlign: "center" }}>No data available</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
       <button className="print-btn" onClick={handlePrint}>
         🖨️ Print Report
       </button>
