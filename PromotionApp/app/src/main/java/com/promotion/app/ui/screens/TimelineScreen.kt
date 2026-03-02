@@ -66,7 +66,7 @@ fun TimelineScreen(
         ) {
             itemsIndexed(predictions) { index, pred ->
                 val yearsBetween = if (index > 0) {
-                    calculateYearsBetween(predictions[index - 1].PredictedDate, pred.PredictedDate)
+                    calculateYearsBetween(predictions[index - 1].PredictedDate ?: "", pred.PredictedDate ?: "")
                 } else null
 
                 TimelineStep(

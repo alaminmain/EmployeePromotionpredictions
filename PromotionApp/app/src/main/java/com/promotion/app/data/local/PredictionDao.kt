@@ -7,19 +7,25 @@ import kotlinx.coroutines.flow.Flow
 interface PredictionDao {
 
     @Query("""
-        SELECT DISTINCT EmpId, Name, MIN(FromGrade) as FromGrade 
+        SELECT EmpId, Name, MIN(FromGrade) as FromGrade, MIN(SeniorId) as SeniorId
         FROM Predictions 
         GROUP BY EmpId, Name 
-        ORDER BY Name
+        ORDER BY CAST(REPLACE(MIN(FromGrade), 'G-', '') AS INTEGER) ASC,
+                 CASE WHEN MIN(SeniorId) IS NULL THEN 1 ELSE 0 END ASC,
+                 MIN(SeniorId) ASC,
+                 EmpId ASC
     """)
     fun getAllEmployees(): Flow<List<EmployeeSummary>>
 
     @Query("""
-        SELECT DISTINCT EmpId, Name, MIN(FromGrade) as FromGrade 
+        SELECT EmpId, Name, MIN(FromGrade) as FromGrade, MIN(SeniorId) as SeniorId
         FROM Predictions 
         WHERE Name LIKE '%' || :query || '%' OR EmpId LIKE '%' || :query || '%'
         GROUP BY EmpId, Name 
-        ORDER BY Name
+        ORDER BY CAST(REPLACE(MIN(FromGrade), 'G-', '') AS INTEGER) ASC,
+                 CASE WHEN MIN(SeniorId) IS NULL THEN 1 ELSE 0 END ASC,
+                 MIN(SeniorId) ASC,
+                 EmpId ASC
     """)
     fun searchEmployees(query: String): Flow<List<EmployeeSummary>>
 

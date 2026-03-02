@@ -13,6 +13,7 @@ namespace PromotionAPI.Services
         public string ToGrade { get; set; } = "";
         public string NewDesignation { get; set; } = "";
         public DateTime PredictedDate { get; set; }
+        public int? SeniorId { get; set; }
     }
 
     public class Employee
@@ -258,14 +259,15 @@ namespace PromotionAPI.Services
             string sql = @"
                 DROP TABLE IF EXISTS Predictions;
                 CREATE TABLE Predictions (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    EmpId TEXT,
-                    Name TEXT,
-                    FromGrade TEXT,
-                    ToGrade TEXT,
-                    NewDesignation TEXT,
-                    PredictedDate TEXT,
-                    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                    EmpId TEXT NOT NULL,
+                    Name TEXT NOT NULL,
+                    FromGrade TEXT NOT NULL,
+                    ToGrade TEXT NOT NULL,
+                    NewDesignation TEXT NOT NULL,
+                    PredictedDate TEXT NOT NULL,
+                    SeniorId INTEGER,
+                    CreatedAt TEXT DEFAULT CURRENT_TIMESTAMP
                 );
                 CREATE INDEX idx_empid ON Predictions(EmpId);
                 CREATE INDEX idx_date ON Predictions(PredictedDate);";
@@ -295,7 +297,8 @@ namespace PromotionAPI.Services
                         FromGrade = $"G-{emp.SimGradeNo}",
                         ToGrade = "RETIRED",
                         NewDesignation = "Retirement",
-                        PredictedDate = emp.RetirementDate
+                        PredictedDate = emp.RetirementDate,
+                        SeniorId = emp.SeniorId
                     });
                 }
 
@@ -350,7 +353,8 @@ namespace PromotionAPI.Services
                             FromGrade = $"G-{winner.SimGradeNo}",
                             ToGrade = $"G-{targetPost.GradeNo}",
                             NewDesignation = targetPost.DesignationName,
-                            PredictedDate = currentDate
+                            PredictedDate = currentDate,
+                            SeniorId = winner.SeniorId
                         });
 
                         winner.SimGradeNo = targetPost.GradeNo;
@@ -368,8 +372,8 @@ namespace PromotionAPI.Services
             using var conn = new SqliteConnection($"Data Source={_dbPath}");
             conn.Open();
             using var transaction = conn.BeginTransaction();
-            string sql = @"INSERT INTO Predictions (EmpId, Name, FromGrade, ToGrade, NewDesignation, PredictedDate) 
-                           VALUES (@eid, @name, @from, @to, @desg, @date)";
+            string sql = @"INSERT INTO Predictions (EmpId, Name, FromGrade, ToGrade, NewDesignation, PredictedDate, SeniorId) 
+                           VALUES (@eid, @name, @from, @to, @desg, @date, @seniorId)";
 
             foreach (var p in predictions)
             {
@@ -381,6 +385,7 @@ namespace PromotionAPI.Services
                 cmd.Parameters.AddWithValue("@to", p.ToGrade);
                 cmd.Parameters.AddWithValue("@desg", p.NewDesignation);
                 cmd.Parameters.AddWithValue("@date", p.PredictedDate.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@seniorId", (object?)p.SeniorId ?? DBNull.Value);
                 cmd.ExecuteNonQuery();
             }
             transaction.Commit();

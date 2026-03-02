@@ -51,14 +51,14 @@ try
             conn.Open();
             var sql = @"
             CREATE TABLE IF NOT EXISTS Predictions (
-                Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                EmpId TEXT,
-                Name TEXT,
-                FromGrade TEXT,
-                ToGrade TEXT,
-                NewDesignation TEXT,
-                PredictedDate TEXT,
-                CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+                Id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                EmpId TEXT NOT NULL,
+                Name TEXT NOT NULL,
+                FromGrade TEXT NOT NULL,
+                ToGrade TEXT NOT NULL,
+                NewDesignation TEXT NOT NULL,
+                PredictedDate TEXT NOT NULL,
+                CreatedAt TEXT DEFAULT CURRENT_TIMESTAMP
             );
             CREATE INDEX IF NOT EXISTS idx_empid ON Predictions(EmpId);
             CREATE INDEX IF NOT EXISTS idx_date ON Predictions(PredictedDate);";

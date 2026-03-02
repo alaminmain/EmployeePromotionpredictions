@@ -21,6 +21,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.promotion.app.data.local.EmployeeSummary
+import com.promotion.app.ui.SyncStatus
+import androidx.compose.material.icons.filled.Warning
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -29,7 +31,8 @@ fun EmployeeListScreen(
     searchQuery: String,
     onSearchChange: (String) -> Unit,
     onEmployeeClick: (String) -> Unit,
-    dbCount: Int
+    dbCount: Int,
+    syncStatus: SyncStatus
 ) {
     Column(
         modifier = Modifier
@@ -58,6 +61,31 @@ fun EmployeeListScreen(
                     "$dbCount predictions • ${employees.size} employees",
                     color = Color(0xFFE0E7FF),
                     fontSize = 14.sp
+                )
+            }
+        }
+
+        // Offline Indicator
+        if (syncStatus is SyncStatus.Error) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color(0xFFB45309)) // Dark Amber
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    Icons.Default.Warning,
+                    contentDescription = "Offline indicator",
+                    tint = Color.White,
+                    modifier = Modifier.size(16.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    "Offline Mode (Last sync failed)",
+                    color = Color.White,
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.SemiBold
                 )
             }
         }

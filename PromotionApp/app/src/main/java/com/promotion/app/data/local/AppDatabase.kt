@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Prediction::class], version = 1, exportSchema = false)
+@Database(entities = [Prediction::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun predictionDao(): PredictionDao
 
@@ -20,7 +20,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "Promotion.db"
                 )
-                    .createFromAsset("Promotion.db") // Pre-bundled database
+                    .createFromAsset("Promotion.db")
                     .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance

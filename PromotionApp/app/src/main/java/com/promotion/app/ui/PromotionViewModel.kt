@@ -1,14 +1,18 @@
 package com.promotion.app.ui
 
 import android.app.Application
+import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.promotion.app.data.local.EmployeeSummary
 import com.promotion.app.data.local.Prediction
 import com.promotion.app.data.local.YearlyCount
 import com.promotion.app.data.repository.PromotionRepository
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import java.io.File
+import java.io.FileOutputStream
 
 class PromotionViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -68,6 +72,21 @@ class PromotionViewModel(application: Application) : AndroidViewModel(applicatio
         repo.setApiUrl(url)
     }
 
+    fun simulateLocal() {
+        viewModelScope.launch {
+            _syncStatus.value = SyncStatus.Syncing
+            try {
+                val db = com.promotion.app.data.local.AppDatabase.getInstance(getApplication())
+                val mgr = com.promotion.app.data.simulation.SimulationManager(getApplication(), db.predictionDao())
+                val count = mgr.runSimulation()
+                _dbCount.value = count
+                _syncStatus.value = SyncStatus.Success("Simulated $count predictions offline")
+            } catch (e: Exception) {
+                _syncStatus.value = SyncStatus.Error(e.message ?: "Simulation failed")
+            }
+        }
+    }
+
     fun syncNow() {
         viewModelScope.launch {
             _syncStatus.value = SyncStatus.Syncing
@@ -81,6 +100,29 @@ class PromotionViewModel(application: Application) : AndroidViewModel(applicatio
                     _syncStatus.value = SyncStatus.Error(error.message ?: "Unknown error")
                 }
             )
+        }
+    }
+
+    fun saveCsvFile(uri: Uri, fileName: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            _syncStatus.value = SyncStatus.Syncing
+            try {
+                val context = getApplication<Application>()
+                val inputStream = context.contentResolver.openInputStream(uri)
+                val destFile = File(context.filesDir, fileName)
+
+                if (inputStream != null) {
+                    val outputStream = FileOutputStream(destFile)
+                    inputStream.copyTo(outputStream)
+                    inputStream.close()
+                    outputStream.close()
+                    _syncStatus.value = SyncStatus.Success("Successfully updated $fileName")
+                } else {
+                    _syncStatus.value = SyncStatus.Error("Failed to read file from storage")
+                }
+            } catch (e: Exception) {
+                _syncStatus.value = SyncStatus.Error("Error saving file: ${e.message}")
+            }
         }
     }
 }

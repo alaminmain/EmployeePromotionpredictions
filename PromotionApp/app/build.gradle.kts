@@ -17,10 +17,20 @@ android {
         versionName = "1.0"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("release.keystore")
+            storePassword = "promotion123"
+            keyAlias = "promotion"
+            keyPassword = "promotion123"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
@@ -69,11 +79,16 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
+    // CSV Parsing
+    implementation("com.github.doyaaaaaken:kotlin-csv-jvm:1.9.3")
+
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 
     // Core
     implementation("androidx.core:core-ktx:1.15.0")
+    // Snapshot
+    implementation("androidx.core:core-splashscreen:1.0.1")
 
     // Debug
     debugImplementation("androidx.compose.ui:ui-tooling")

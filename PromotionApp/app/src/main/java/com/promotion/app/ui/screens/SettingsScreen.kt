@@ -1,13 +1,14 @@
 package com.promotion.app.ui.screens
 
+import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.CloudSync
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Error
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -27,9 +28,21 @@ fun SettingsScreen(
     dbCount: Int,
     onApiUrlChange: (String) -> Unit,
     onSyncNow: () -> Unit,
+    onSimulateLocal: () -> Unit,
+    onSaveCsv: (Uri, String) -> Unit,
     onBack: () -> Unit
 ) {
     var urlInput by remember { mutableStateOf(apiUrl) }
+
+    val empListLauncher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+        uri?.let { onSaveCsv(it, "EmpList.csv") }
+    }
+    val orgPostLauncher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+        uri?.let { onSaveCsv(it, "Final_Complete_Master_List.csv") }
+    }
+    val slListLauncher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+        uri?.let { onSaveCsv(it, "EmpListSL.csv") }
+    }
 
     Column(
         modifier = Modifier
@@ -132,8 +145,64 @@ fun SettingsScreen(
                 }
             }
 
-            // Sync status message
             Spacer(modifier = Modifier.height(12.dp))
+
+            // Simulate Local button
+            Button(
+                onClick = onSimulateLocal,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(52.dp),
+                enabled = syncStatus !is SyncStatus.Syncing,
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF10B981)), // Emerald
+                shape = RoundedCornerShape(12.dp)
+            ) {
+                when (syncStatus) {
+                    is SyncStatus.Syncing -> {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(20.dp),
+                            color = Color.White,
+                            strokeWidth = 2.dp
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Simulating Offline...")
+                    }
+                    else -> {
+                        Icon(Icons.Default.CloudSync, contentDescription = null) // Using same icon for simplicity
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Simulate Offline (Device)", fontWeight = FontWeight.Bold)
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+            HorizontalDivider(color = Color(0xFF334155))
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Text("Update Local Data", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+            Spacer(modifier = Modifier.height(8.dp))
+
+            // File pickers
+            CsvPickerCard(
+                title = "Employees List",
+                subtitle = "EmpList.csv",
+                onClick = { empListLauncher.launch("text/csv") } // Note: some devices might need "*/*" to show CSVs properly
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            CsvPickerCard(
+                title = "Seniority List",
+                subtitle = "EmpListSL.csv",
+                onClick = { slListLauncher.launch("text/csv") }
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            CsvPickerCard(
+                title = "Organization Posts",
+                subtitle = "Master List.csv",
+                onClick = { orgPostLauncher.launch("text/csv") }
+            )
+
+            // Sync status message
+            Spacer(modifier = Modifier.height(16.dp))
             when (syncStatus) {
                 is SyncStatus.Success -> {
                     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -150,6 +219,28 @@ fun SettingsScreen(
                     }
                 }
                 else -> {}
+            }
+        }
+    }
+}
+
+@Composable
+fun CsvPickerCard(title: String, subtitle: String, onClick: () -> Unit) {
+    Card(
+        onClick = onClick,
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF1E293B)),
+        shape = RoundedCornerShape(12.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(Icons.Default.UploadFile, contentDescription = null, tint = Color(0xFF6366F1))
+            Spacer(modifier = Modifier.width(16.dp))
+            Column {
+                Text(title, color = Color.White, fontWeight = FontWeight.SemiBold)
+                Text(subtitle, color = Color(0xFF94A3B8), fontSize = 13.sp)
             }
         }
     }

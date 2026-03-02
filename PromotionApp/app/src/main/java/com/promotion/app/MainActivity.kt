@@ -23,9 +23,11 @@ import androidx.navigation.compose.rememberNavController
 import com.promotion.app.ui.PromotionViewModel
 import com.promotion.app.ui.screens.*
 import com.promotion.app.ui.theme.PromotionAppTheme
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
@@ -112,7 +114,8 @@ fun PromotionApp(viewModel: PromotionViewModel = viewModel()) {
                         viewModel.selectEmployee(empId)
                         navController.navigate("timeline")
                     },
-                    dbCount = dbCount
+                    dbCount = dbCount,
+                    syncStatus = syncStatus
                 )
             }
 
@@ -138,6 +141,8 @@ fun PromotionApp(viewModel: PromotionViewModel = viewModel()) {
                     dbCount = dbCount,
                     onApiUrlChange = { viewModel.updateApiUrl(it) },
                     onSyncNow = { viewModel.syncNow() },
+                    onSimulateLocal = { viewModel.simulateLocal() },
+                    onSaveCsv = { uri, fileName -> viewModel.saveCsvFile(uri, fileName) },
                     onBack = { navController.popBackStack() }
                 )
             }
